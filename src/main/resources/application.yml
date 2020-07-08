@@ -1,0 +1,23 @@
+server:
+  port: 9000
+  context-path: /travel
+logging:
+  level:
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+oauth2:
+  client-id: travel-api-client
+  client-secret: psw
+  client-secret-encrypted: ENC(rGjOfPieC3NRCGqmgyDb3Q==)
+  token-url: http://localhost:8080/oauth/token
+  grant-type: client_credentials
+endpoint:
+  fareurl: http://localhost:8080/fares/{origin}/{destination}
+  searchurl: http://localhost:8080/airports?
+  airportsurl: http://localhost:8080/airports
+  
+app:
+  encryptionPwd: airport
+  isEncrypted: true
+  encryptionAlgo: PBEWithMD5AndDES
+  
